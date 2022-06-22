@@ -1,13 +1,17 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, StatusBar as Bar, Platform } from 'react-native';
 import BottomTabs from './src/navigation/bottom/BottomTab';
 import { colors } from './src/constant/colors';
 
 export default function App() {
   return (
       <NavigationContainer>
-        <StatusBar style="light" backgroundColor={colors.purple} />
+        {Platform.OS == 'ios' ? (
+          <Bar barStyle={"dark-content"}/>
+        ) : (
+          <StatusBar style="light" backgroundColor={colors.purple} />
+        )}
         <BottomTabs />
       </NavigationContainer>
   );

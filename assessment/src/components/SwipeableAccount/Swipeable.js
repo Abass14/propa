@@ -7,10 +7,11 @@ import Cash from "../Cash/Cash";
 import Header from "../Header/Header";
 
 const Swipeable = ({acc, goBack}) => {
-    let countIndex = acc.index
+    
     const indicator = (index) => {
         return acc.index === index
     }
+
     return (
         <View
             style={{
@@ -21,7 +22,7 @@ const Swipeable = ({acc, goBack}) => {
                 initialPage={acc.index}
                 style={{
                     flex: 1,
-                    marginTop: -40,
+                    marginTop: -30,
                     width: '100%',
                     alignItems: 'center',
                     justifyContent: 'center',
@@ -38,18 +39,18 @@ const Swipeable = ({acc, goBack}) => {
                                 style={{marginBottom: 20}}
                                 goBack={goBack}
                             />
-                            <Cash value={account.cash} style={{fontSize: 28, color: colors.white}} />
+                            <Cash value={account.cash} style={{fontSize: 40, color: colors.white}} />
                         </View>
                     )
                 })}
             </PagerView>
             {Platform.OS == 'android' && (
-                <View style={{flexDirection: 'row', alignSelf: 'center', width: 100, justifyContent: 'space-between', marginBottom: 5}}>
-                    <View style={{width: 10, height: 10, borderRadius: 5, backgroundColor: indicator(0) ? colors.white : colors.pink}}>
+                <View style={{flexDirection: 'row', alignSelf: 'center', width: 50, justifyContent: 'space-between', marginBottom: 5}}>
+                    <View style={{width: 7, height: 7, borderRadius: 5, backgroundColor: indicator(0) ? colors.white : colors.pink}}>
                     </View>
-                    <View style={{width: 10, height: 10, borderRadius: 5, backgroundColor: indicator(1) ? colors.white : colors.pink}}>
+                    <View style={{width: 7, height: 7, borderRadius: 5, backgroundColor: indicator(1) ? colors.white : colors.pink}}>
                     </View>
-                    <View style={{width: 10, height: 10, borderRadius: 5, backgroundColor: indicator(2) ? colors.white : colors.pink}}>
+                    <View style={{width: 7, height: 7, borderRadius: 5, backgroundColor: indicator(2) ? colors.white : colors.pink}}>
                     </View>
                 </View>
             )}

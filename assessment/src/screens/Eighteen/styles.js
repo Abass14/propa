@@ -41,7 +41,7 @@ export const styles = StyleSheet.create({
         borderRadius: 5,
         height: 115,
         width: '100%',
-        marginTop: 10
+        marginTop: 20
     },
     thrityDays: {
         flex: 1,

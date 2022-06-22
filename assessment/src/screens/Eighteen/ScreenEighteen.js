@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { View, Text, FlatList } from 'react-native';
 import CustomText from '../../components/CustomText/CustomText';
 import BackGroundOne from '../../components/ScreenBackGroundOne/BackGroundOne';
@@ -48,7 +48,7 @@ const ScreenEighteen = ({route, navigation}) => {
             }
             childTwo={
                 <View style={styles.childOne}>
-                    <View style={styles.childViews}>
+                    <View style={[styles.childViews, {flex: 6.5}]}>
                         <View style={styles.iconView}>
                             <View>
                                 <View style={styles.iconCircle}>
@@ -85,13 +85,13 @@ const ScreenEighteen = ({route, navigation}) => {
                                     <Cash value={"5,250.00"} style={{color: 'green', fontSize: 28}} />
                                     <CustomText otherStyle={{textAlign: 'center'}}>Money in</CustomText>
                                 </View>
-                                <View style={{flexDirection: 'row', alignItems: 'flex-end'}}>
-                                    <View style={{width: 8, backgroundColor: 'green', height: 30, marginEnd: 5}}></View>
-                                    <View style={{width: 8, backgroundColor: colors.gray, height: 50, marginStart: 5}}></View>
+                                <View style={{flexDirection: 'row', alignItems: 'flex-end', marginBottom: 12}}>
+                                    <View style={{width: 8, backgroundColor: 'green', height: 30, marginEnd: 2}}></View>
+                                    <View style={{width: 8, backgroundColor: colors.gray, height: 50, marginStart: 2}}></View>
                                 </View>
                                 <View style={{justifyContent: 'center'}}>
                                     <Cash value={"2,250.96"} style={{color: colors.gray, fontSize: 28}} />
-                                    <CustomText otherStyle={{textAlign: 'center'}}>Money in</CustomText>
+                                    <CustomText otherStyle={{textAlign: 'center'}}>Money out</CustomText>
                                 </View>
                             </View>
                         </View>

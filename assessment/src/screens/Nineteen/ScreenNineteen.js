@@ -21,7 +21,7 @@ const ScreenNineteen = ({route, navigation}) => {
                 backgroundColor: colors.pink_purple
             }}
             styleTwo={{
-                flex: 5
+                flex: 6
             }}
             childOne={
                 <Header 

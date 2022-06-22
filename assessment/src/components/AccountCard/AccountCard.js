@@ -13,6 +13,7 @@ const AccountCard = ({accountTxt, CardNo, cashValue, svgXml, onPress}) => {
         <TouchableOpacity
             style={styles.container}
             onPress={onPress}
+            activeOpacity={1}
         >
             <View style={styles.viewOne}>
                 <CustomText>{accountTxt}</CustomText>
